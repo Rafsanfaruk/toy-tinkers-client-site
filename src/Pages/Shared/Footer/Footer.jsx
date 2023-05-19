@@ -8,8 +8,8 @@ const Footer = () => {
         <div className="flex flex-wrap justify-between">
           <div className="w-full md:w-1/2 lg:w-1/3 mb-4 md:mb-0">
             <img src={logo} alt="Website Logo" className="h-8 w-auto" />
-            <p className="text-gray-400 text-sm mt-2">Your Website Tagline</p>
-            <p className="text-gray-400 text-sm mt-2">&copy; {new Date().getFullYear()} Your Website. All rights reserved.</p>
+            <p className="text-gray-400 text-sm mt-2">Toy Tinkerers</p>
+            <p className="text-gray-400 text-sm mt-2">&copy; {new Date().getFullYear()} Toy Tinkerers, All rights reserved.</p>
           </div>
           <div className="w-full md:w-1/2 lg:w-1/3 mb-4 md:mb-0">
             <h4 className="text-white text-lg font-semibold mb-4">Contact Us</h4>
