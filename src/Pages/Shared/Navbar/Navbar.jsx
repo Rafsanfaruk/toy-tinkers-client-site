@@ -27,7 +27,7 @@ const Navbar = () => {
           <Link to="/" className="text-white hover:text-gray-300 ml-4">
             Home
           </Link>
-          <Link to="/toys" className="text-white hover:text-gray-300 ml-4">
+          <Link to="/alltoys" className="text-white hover:text-gray-300 ml-4">
             All Toys
           </Link>
           {isLoggedIn && (
