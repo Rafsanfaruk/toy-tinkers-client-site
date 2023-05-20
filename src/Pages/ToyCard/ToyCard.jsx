@@ -21,7 +21,7 @@ const ToyCard = ({ allToy }) => {
         <p className="mb-2">Price: ${price}</p>
         <p className="mb-2">Available Quantity: {available_quantity}</p>
         <div className="card-actions flex justify-end">
-          <Link to={`/addToy/${_id}`}>
+          <Link to={`/add-toy/${_id}`}>
             <button className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-full">
               View Details
             </button>

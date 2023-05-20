@@ -6,6 +6,7 @@ import Blogs from "../Pages/BLogs/Blogs";
 import Login from "../Pages/Login/Login";
 import Registration from "../Pages/Registration/Registration";
 import AllToys from "../Pages/AllToys/AllToys";
+import AddToys from "../Pages/AddToys/AddToys";
 
 const router = createBrowserRouter([
     {
@@ -32,6 +33,11 @@ const router = createBrowserRouter([
         {
           path:'/singup',
           element:<Registration></Registration>
+        },
+        {
+          path:'/add-toy/:id',
+          element:<AddToys></AddToys>,
+          loader : ({params})=>(`http://localhost:5000/allToys/${params.id}`)
         },
 
       ]
