@@ -66,12 +66,12 @@ const Navbar = () => {
               </button>
             </div>
           ) : (
-            <button
+            <Link to='/login'
               className="text-white hover:text-gray-300 ml-4"
               onClick={handleLogin}
             >
               Login
-            </button>
+            </Link>
           )}
         </div>
       </div>
