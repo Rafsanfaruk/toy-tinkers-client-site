@@ -1,22 +1,43 @@
 // import React from 'react';
 
 import { Link } from "react-router-dom";
-import pic from '../../assets/Login/Login.jpg'
+import pic from "../../assets/Login/Login.jpg";
 import SocialButton from "../SocialButton/SocialButton";
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 
 const Login = () => {
+  const { SignIn } = useContext(AuthContext);
 
-    
   const handleLogin = (event) => {
     event.preventDefault();
     const form = event.target;
     const email = form.email.value;
     const password = form.password.value;
-    console.log(name, email, password);
-  }
+    console.log(email, password);
 
-    return (
-        <div className="hero min-h-screen bg-base-200">
+    SignIn(email, password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        toast.success('Login successful!', {
+            position: toast.POSITION.TOP_RIGHT,
+          });
+      })
+      .catch((err) => {
+        console.log(err);
+        toast.error('An error occurred. Please try again.', {
+            position: toast.POSITION.TOP_RIGHT,
+          });
+      });
+  };
+
+  return (
+    <div className="hero min-h-screen bg-base-200">
       <div className="hero-content flex-col lg:flex-row">
         <div className=" w-1/2 mr-12">
           <img src={pic} alt="" />
@@ -70,8 +91,9 @@ const Login = () => {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </div>
-    );
+  );
 };
 
 export default Login;

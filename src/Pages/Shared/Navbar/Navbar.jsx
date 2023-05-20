@@ -1,22 +1,15 @@
-// import React, { useState } from 'react';
-import { useState } from 'react';
-import logo from '../../../assets/logo.png';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../../../assets/logo.png';
+import { AuthContext } from '../../../Providers/AuthProvider';
 
 const Navbar = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [username, setUsername] = useState('');
+  const { user, SignOut } = useContext(AuthContext);
 
-  const handleLogin = () => {
-    // Perform login here
-    setIsLoggedIn(true);
-    setUsername('John Doe'); // Set the username after successful login
-  };
+  const isLoggedIn = user !== null;
 
   const handleLogout = () => {
-    // Perform logout here
-    setIsLoggedIn(false);
-    setUsername('');
+    SignOut();
   };
 
   return (
@@ -56,7 +49,7 @@ const Navbar = () => {
                 src=""
                 alt="User Profile"
                 className="h-8 w-8 rounded-full cursor-pointer"
-                title={username ? `Welcome, ${username}` : ''}
+                title={user ? `Welcome, ${user}` : ''}
               />
               <button
                 className="text-white hover:text-gray-300 ml-2"
@@ -66,10 +59,7 @@ const Navbar = () => {
               </button>
             </div>
           ) : (
-            <Link to='/login'
-              className="text-white hover:text-gray-300 ml-4"
-              onClick={handleLogin}
-            >
+            <Link to="/login" className="text-white hover:text-gray-300 ml-4">
               Login
             </Link>
           )}

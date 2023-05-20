@@ -8,3 +8,4 @@
 
 ---> https://daisyui.com/docs/install/
 
+--> https://www.npmjs.com/package/react-toastify
