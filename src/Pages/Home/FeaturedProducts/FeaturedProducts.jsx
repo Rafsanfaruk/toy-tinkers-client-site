@@ -18,7 +18,7 @@ const FeaturedProducts = () => {
             />
             <h4 className="text-lg font-bold mb-2">Product 1</h4>
             <p className="text-gray-600">Description of Product 1.</p>
-            <button className="mt-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-full">Buy Now</button>
+            <button className="mt-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-full">Feature add</button>
           </div>
           <div className="bg-white rounded-lg shadow-md p-6">
             <img
@@ -28,7 +28,7 @@ const FeaturedProducts = () => {
             />
             <h4 className="text-lg font-bold mb-2">Product 2</h4>
             <p className="text-gray-600">Description of Product 2.</p>
-            <button className="mt-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-full">Buy Now</button>
+            <button className="mt-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-full">Feature add</button>
           </div>
           <div className="bg-white rounded-lg shadow-md p-6">
             <img
@@ -38,7 +38,7 @@ const FeaturedProducts = () => {
             />
             <h4 className="text-lg font-bold mb-2">Product 2</h4>
             <p className="text-gray-600">Description of Product 2.</p>
-            <button className="mt-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-full">Buy Now</button>
+            <button className="mt-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-full">Feature add</button>
           </div>
           <div className="bg-white rounded-lg shadow-md p-6">
             <img
@@ -48,7 +48,7 @@ const FeaturedProducts = () => {
             />
             <h4 className="text-lg font-bold mb-2">Product 2</h4>
             <p className="text-gray-600">Description of Product 2.</p>
-            <button className="mt-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-full">Buy Now</button>
+            <button className="mt-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-full">Feature add</button>
           </div>
         </div>
       </div>

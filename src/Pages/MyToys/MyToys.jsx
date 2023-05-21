@@ -1,6 +1,9 @@
 import { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
 import MyToysRow from './MyToysRow';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 
 const MyToys = () => {
   const { user } = useContext(AuthContext);
@@ -25,9 +28,12 @@ const MyToys = () => {
         .then(data => {
             console.log(data);
             if(data.deletedCount >0 ){
-                alert('delete successfully')
+              toast.success("Delete successfully!", {
+                position: toast.POSITION.TOP_RIGHT,
+              });
                 const remaining =myToys.filter(t => t._id !==id)
                 setMyToys(remaining);
+               
             }
         })
     }
@@ -59,8 +65,12 @@ const MyToys = () => {
           </tbody>
         </table>
       </div>
+      <ToastContainer />
     </div>
   );
 };
 
 export default MyToys;
+
+// toast.success("Toy added successfully!", {
+  // position: toast.POSITION.TOP_RIGHT,
