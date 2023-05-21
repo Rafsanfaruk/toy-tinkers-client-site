@@ -1,23 +1,13 @@
-import React from "react";
+// import React from "react";
 
-const MyToysRow = ({ toy }) => {
+const MyToysRow = ({ toy, handleDelete }) => {
   const { _id, name, email, price, quantity, rating, picture_url, sub_category } =
     toy;
 
   const imgElement = new Image();
   imgElement.src = picture_url;
 
-  const handleDelete =id =>{
-    const prceed =confirm('Are you sure you want to delete')
-    if(prceed){
-        fetch(``)
-        .then(res => res.json())
-        .then(data => {
-            console.log(data);
-        })
-    }
-  }
-
+  
   return (
     <tr>
       <th>
