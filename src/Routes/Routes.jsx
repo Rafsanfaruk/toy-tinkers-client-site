@@ -34,10 +34,11 @@ const router = createBrowserRouter([
           path:'/singup',
           element:<Registration></Registration>
         },
+       
         {
           path:'/add-toy/:id',
           element:<AddToys></AddToys>,
-          loader : ({params})=>(`http://localhost:5000/allToys/${params.id}`)
+          loader : ({params})=> fetch(`http://localhost:5000/allToys/${params.id}`)
         },
 
       ]

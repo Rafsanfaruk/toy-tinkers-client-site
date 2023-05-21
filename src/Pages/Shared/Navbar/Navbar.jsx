@@ -51,12 +51,12 @@ const Navbar = () => {
                 className="h-8 w-8 rounded-full cursor-pointer"
                 title={user ? `Welcome, ${user}` : ''}
               />
-              <button
+              <Link to='/login'
                 className="text-white hover:text-gray-300 ml-2"
                 onClick={handleLogout}
               >
                 Logout
-              </button>
+              </Link>
             </div>
           ) : (
             <Link to="/login" className="text-white hover:text-gray-300 ml-4">
