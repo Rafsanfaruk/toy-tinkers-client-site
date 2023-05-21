@@ -1,26 +1,16 @@
-// import React from "react";
-
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const MyToysRow = ({ toy, handleDelete }) => {
-  const {
-    _id,
-    name,
-    email,
-    price,
-    quantity,
-    rating,
-    picture_url,
-    sub_category,
-  } = toy;
-
-  const imgElement = new Image();
-  imgElement.src = picture_url;
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const { _id, price, quantity, picture_url, sub_category } = toy;
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   const handleUpdateClick = () => {
-    setIsModalOpen(true);
+    
+  };
+
+  const handleImageLoad = () => {
+    setIsImageLoaded(true);
   };
 
   return (
@@ -50,9 +40,12 @@ const MyToysRow = ({ toy, handleDelete }) => {
         <div className="flex items-center space-x-3">
           <div className="avatar">
             <div className="w-32 rounded">
-              {imgElement.complete ? (
-                <img src={picture_url} alt="Avatar Tailwind CSS Component" />
-              ) : null}
+              <img
+                src={picture_url}
+                alt="Avatar Tailwind CSS Component"
+                onLoad={handleImageLoad}
+                style={{ display: isImageLoaded ? 'block' : 'none' }}
+              />
             </div>
           </div>
         </div>
@@ -61,13 +54,13 @@ const MyToysRow = ({ toy, handleDelete }) => {
       <td>{quantity}</td>
       <td>{sub_category}</td>
       <th>
-        <Link to={`/updatedtoys/${_id}`}
+        <Link
+          to={`/updatedtoys/${_id}`}
           onClick={handleUpdateClick}
           className="mt-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-full"
         >
           Update
         </Link>
-        
       </th>
     </tr>
   );

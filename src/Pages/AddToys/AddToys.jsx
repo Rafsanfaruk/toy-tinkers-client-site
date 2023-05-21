@@ -12,13 +12,12 @@ const AddToys = () => {
 
   const {
     name,
-    _id,
+    
     picture_url,
-    seller_name,
+   
     sub_category,
     price,
-    available_quantity,
-    seller_email,
+   
   } = toys;
 
   const handleAddToy = (event) => {

@@ -8,13 +8,13 @@ const UpdatedToys = () => {
 
     const updatedToy =useLoaderData();
     const {
-        _id,
+        
         name,
-        seller_name,
+      
         email,
         price,
-        quantity,
-        rating,
+       
+       
         picture_url,
         sub_category,
       } = updatedToy;
