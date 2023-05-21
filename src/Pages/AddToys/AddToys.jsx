@@ -83,7 +83,7 @@ const AddToys = () => {
             <input
               type="email"
               name="email"
-              defaultValue={user?.seller_name}
+              defaultValue={user?.email}
               placeholder="email"
               className="input input-bordered"
             />
@@ -160,7 +160,3 @@ const AddToys = () => {
 };
 
 export default AddToys;
-
-// toast.success('Toy added successfully!', {
-//     position: toast.POSITION.BOTTOM_RIGHT
-//   });

@@ -61,7 +61,7 @@ const MyToysRow = ({ toy, handleDelete }) => {
       <td>{quantity}</td>
       <td>{sub_category}</td>
       <th>
-        <Link to={`updatedtoys/${_id}`}
+        <Link to={`/updatedtoys/${_id}`}
           onClick={handleUpdateClick}
           className="mt-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-full"
         >
